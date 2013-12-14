@@ -1,0 +1,396 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.ground {
+    position: fixed;
+    z-index: 15;
+    top: 80%;
+    left: 50%;
+    margin-left: -50em;
+    width: 100em;
+    height: 100em;
+    background: #e2e2e2;
+
+    border-radius: 100em;
+    -moz-border-radius: 100em;
+    -webkit-border-radius: 100em;
+}
+.ground:before , .ground:after {
+    background-color: #fff;
+    content: "";
+    height: 100em;
+    position: absolute;
+    top: -2em;
+    width: 100em;
+
+    border-radius: 100em;
+    -moz-border-radius: 100em;
+    -webkit-border-radius: 100em;
+}
+.ground:before {
+    left: 40em;
+}
+.ground:after {
+    right: 40em;
+}
+
+
+.ambient.night .instructions {
+    visibility: hidden;
+}
+
+.message {
+    visibility: hidden;
+    position: absolute;
+    top:3%;
+    left:50%;
+    z-index: 19;
+    font-family: "Helvetica Neue", Helvetica;
+    font-size: 2em;
+    color: #ed4747;
+}
+.message p {
+    background: whitesmoke!important;
+    margin-left: -3.5em;
+    border-radius: 2em;
+}
+
+
+.tree {
+    position: absolute;
+    left: 50%;
+    bottom:75%;
+    font-size: 1.2em;
+}
+
+.leaf {
+    height: 0;
+    position: absolute;
+    width: 0;    
+
+    border-radius: 4em;
+    -moz-border-radius: 4em;
+    -webkit-border-radius: 4em;
+}
+
+.leaf {
+    z-index: 2;    
+}
+
+
+.tree .leaf:nth-child(1) {
+    border-left: 4em solid transparent;
+    border-right: 4em solid transparent;
+    border-bottom: 4em solid green;
+    left: -4em;
+    top: 2em;
+}
+.tree .leaf:nth-child(2) {
+    border-left: 6em solid transparent;
+    border-right: 6em solid transparent;
+    border-bottom: 6em solid green;
+    left: -6em;
+    top: 4em;
+}
+.tree .leaf:nth-child(3) {
+    border-left: 8em solid transparent;
+    border-right: 8em solid transparent;
+    border-bottom: 8em solid green;
+    left: -8em;
+    top: 6em;
+}
+.tree .leaf:nth-child(4) {
+    border-left: 10em solid transparent;
+    border-right: 10em solid transparent;
+    border-bottom: 10em solid green;
+    left: -10em;
+    top: 8em;
+}
+.tree .leaf:nth-child(5) {
+    border-left: 12em solid transparent;
+    border-right: 12em solid transparent;
+    border-bottom: 12em solid green;
+    left: -12em;
+    top: 10em;
+}
+.tree .leaf:nth-child(6) {
+    border-left: 14em solid transparent;
+    border-right: 14em solid transparent;
+    border-bottom: 14em solid green;
+    left: -14em;
+    top: 12em;
+}
+
+
+#bauble-container
+{
+    position: absolute;
+    z-index: 9;
+    list-style: none;
+    width: 100%;  
+    margin: 0 auto;
+    padding: 0;
+}
+
+#bauble-container li
+{
+    position: absolute;
+}
+#bauble-container li:nth-child(1)
+{
+    top:5em;
+    left:-1.5em;
+}
+#bauble-container li:nth-child(2)
+{
+    top:18em;
+    left:2em;
+}
+#bauble-container li:nth-child(3)
+{
+    top:11em;
+    right:1em;
+}
+#bauble-container li:nth-child(4)
+{
+    top:11em;
+    left:1em;
+}
+#bauble-container li:nth-child(5)
+{
+    top:18em;
+    right:2em;
+}
+
+#bauble-container li:before
+{
+    content: "";
+    background: #dadada;	
+    background: -moz-linear-gradient(bottom, #9c9c9c, rgba(255,255,255,0) );
+    background: -webkit-gradient(linear, left bottom, right top, from(#9c9c9c), color-stop(100%, rgba(255,255,255,0))); 
+    height: 2em;
+    width: 0.2em;
+    display: block;
+    margin: 0 auto;
+}
+
+#bauble-container li:nth-child(2)
+{
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+}
+
+#bauble-container li:nth-child(3)
+{
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+}
+#bauble-container li:nth-child(4)
+{
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+}
+
+#bauble-container li:nth-child(5)
+{
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+}
+
+.bauble
+{
+    font-size: 1em;
+
+    -moz-border-radius: 3em;
+    border-radius: 3em;
+
+    /*    -moz-box-shadow: 0 0 0.5em #777777;
+        box-shadow: 0 0 0.5em #777777;
+        -webkit-box-shadow: 0 0 0.5em #777777;*/
+
+    border: 0.1em solid rgba(0,0,0,0.3);
+    position: relative;
+    height: 3em;
+    width: 3em;  
+}
+
+.bauble:before
+{
+    content: "";
+
+    background: #fff;
+    background: -moz-linear-gradient(left, #fff, #9c9c9c, #fff, #9c9c9c );
+    background: -webkit-gradient(linear, left center, right center, from(#fff), color-stop(25%, #9c9c9c), color-stop(50%, #fff), color-stop(75%, #9c9c9c)); 
+
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+
+    -moz-box-shadow: 0 0.1em 0 rgba(0,0,0,0.2), 0 -0.1em 0 rgba(255,255,255,0.3) inset;
+    box-shadow: 0 0.1em 0 rgba(0,0,0,0.2), 0 -0.1em 0 rgba(255,255,255,0.3) inset;
+    -webkit-box-shadow: 0 0.1em 0 rgba(0,0,0,0.2), 0 -0.1em 0 rgba(255,255,255,0.3) inset;
+
+    border: 0.1em solid #dadada ;
+    height: 0.2em;
+    width: 0.6em;		
+    position: absolute;
+    left: 50%;
+    top: -0.3em;
+    margin-left: -0.35em;
+}
+
+
+.pink.bauble
+{
+    background: #f44cf7;
+}
+
+.red.bauble
+{
+    background: #c8171f; 
+}
+
+.blue.bauble
+{               
+    background: #00a1ee;
+}
+
+.yellow.bauble
+{
+    background: #fcb83d;
+}
+
+.green.bauble
+{
+    background: #4d8d00;
+}
+
+
+
+.ambient {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
+}
+.snow.ambient  {
+    background: whitesmoke!important;    
+}
+.morning.ambient  {
+    background: skyblue!important;
+}
+.afternoon.ambient  {
+    color: whitesmoke!important;
+    background: #00a1ee!important;
+}
+.night.ambient  {
+    color: whitesmoke!important;
+
+    background-color: #080A38!important; 
+    background-image: url('../images/snow.png'), url('../images/snow3.png'), url('../images/snow2.png')!important;
+
+    -webkit-animation: snow 20s linear infinite;
+    -moz-animation: snow 20s linear infinite;
+    -ms-animation: snow 20s linear infinite;
+    animation: snow 20s linear infinite;
+}
+
+
+.night .red-bauble.on
+{
+    background: #c8171f; 
+    background: -moz-radial-gradient(center 45deg,circle cover, #f9d0be, #c8171f);
+    background: -webkit-gradient(radial, 40% 40%, 0, 40% 40%, 50, from(#f9d0be), to(#c8171f)); 
+}
+
+.night .blue-bauble.on
+{               
+    background: #00a1ee;
+    background: -moz-radial-gradient(center 45deg,circle cover, #cde6f9, #00a1ee);
+    background: -webkit-gradient(radial, 40% 40%, 0, 40% 40%, 50, from(#cde6f9), to(#00a1ee)); 
+}
+
+.night .yellow-bauble.on
+{
+    background: #fcb83d;
+    background: -moz-radial-gradient(center 45deg,circle cover, #fcf3a6, #fcb83d);
+    background: -webkit-gradient(radial, 40% 40%, 0, 40% 40%, 50, from(#fcf3a6), to(#fcb83d)); 
+}
+
+.night .green-bauble.on
+{
+    background: #4d8d00;
+    background: -moz-radial-gradient(center 45deg,circle cover, #d1e5b2, #4d8d00);
+    background: -webkit-gradient(radial, 40% 40%, 0, 40% 40%, 50, from(#d1e5b2), to(#4d8d00)); 
+}
+
+.night .bauble.on:after
+{
+    content: "";
+
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+
+    background: #fff;	
+    background: -moz-linear-gradient(bottom, #fff, rgba(255,255,255,0.1) );
+    background: -webkit-gradient(linear, left bottom, right top, from(#fff), color-stop(100%, rgba(255,255,255,0.1))); 
+
+    position: absolute;
+    top: -0.2em;
+    left: -0.5em;
+    opacity: 0.15;
+    height: 4em;
+    width: 4em;
+}
+
+
+
+
+
+
+
+/*
+
+SNOW
+
+*/
+
+
+
+/*Keyframes*/
+@keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-moz-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-webkit-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+50% {background-color:#b4cfe0;}
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px; background-color:#6b92b9;}
+}
+
+@-ms-keyframes snow {
+    0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
